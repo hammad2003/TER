@@ -15,7 +15,6 @@ public class Partida {
         hayGanador = false;
     }
 
-
     public int getModo() {
         return modo;
     }
