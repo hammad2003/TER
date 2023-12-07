@@ -22,7 +22,7 @@ public class Controlador {
     @FXML
     Button btn_start, btn_stop, btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, tmpBtn;
 
-    List<Button> listBtn = new ArrayList<>(); // ? Lista de botones
+    List<Button> listBtn = new ArrayList<>();
 
     @FXML
     AnchorPane innerBorder, cambiarBordeTurno;
@@ -57,7 +57,7 @@ public class Controlador {
     public void iniciarJuego(ActionEvent event) {
         boolean gameCorrecto = false;
         partida.reiniciar();
-        btn_start = (Button) event.getSource(); // Obtiene el botón del evento
+        btn_start = (Button) event.getSource();
 
         if (partida.getModo() == 1) {
             if (textJugador1.getText().trim().isEmpty() || textJugador2.getText().trim().isEmpty()) {
@@ -75,7 +75,7 @@ public class Controlador {
 
         if (gameCorrecto) {
             addAllBtn();
-            btnEnable(); // Activa todos los botones
+            btnEnable();
             switch (partida.getModo()) {
                 case 1:
                     partida.randomTurno();
@@ -132,7 +132,6 @@ public class Controlador {
         cambiarTurnoBorde();
         partida.cambiarTurno();
         partida.setNumeroTurno(partida.getNumeroTurno() + 1);
-        partida.mostrarTableroLog();
         comprobarGanador();
 
         if (partida.getModo() == 2 && partida.isHayGanador()) {
@@ -149,7 +148,6 @@ public class Controlador {
             cambiarTurnoBorde();
             partida.cambiarTurno();
             partida.setNumeroTurno(partida.getNumeroTurno() + 1);
-            partida.mostrarTableroLog();
             comprobarGanador();
         } else {
             btnRandomGamemode2();

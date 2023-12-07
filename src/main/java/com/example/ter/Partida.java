@@ -106,11 +106,4 @@ public class Partida {
         Random rd = new Random();
         turno = rd.nextBoolean();
     }
-
-    public void mostrarTableroLog() {
-        System.out.println("JUGADA nº" + numeroTurno);
-        System.out.println(tablero[0][0] + " - " + tablero[0][1] + " - " + tablero[0][2]);
-        System.out.println(tablero[1][0] + " - " + tablero[1][1] + " - " + tablero[1][2]);
-        System.out.println(tablero[2][0] + " - " + tablero[2][1] + " - " + tablero[2][2] + "\n");
-    }
 }
