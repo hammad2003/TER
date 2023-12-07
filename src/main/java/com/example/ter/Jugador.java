@@ -1,4 +1,4 @@
-    package com.example.ter;
+package com.example.ter;
 
 public class Jugador {
     private String nombre;
@@ -14,35 +14,41 @@ public class Jugador {
     }
 
     public Jugador(String nombre){
-        this(nombre, 0, 0, 0);
+        this.nombre = nombre;
+        ganadas = 0;
+        perdidas = 0;
+        empatadas = 0;
     }
 
     public String getNombre() {
         return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public int getGanadas() {
         return ganadas;
     }
 
-    public void incrementarGanadas() {
-        this.ganadas++;
+    public void setGanadas(int ganadas) {
+        this.ganadas = ganadas;
     }
 
     public int getPerdidas() {
         return perdidas;
     }
 
-    public void incrementarPerdidas() {
-        this.perdidas++;
+    public void setPerdidas(int perdidas) {
+        this.perdidas = perdidas;
     }
 
     public int getEmpatadas() {
         return empatadas;
     }
 
-    public void incrementarEmpatadas() {
-        this.empatadas++;
+    public void setEmpatadas(int empatadas) {
+        this.empatadas = empatadas;
     }
 }
-
